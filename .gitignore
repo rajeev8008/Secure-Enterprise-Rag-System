@@ -1,0 +1,16 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+pytest-cache-files-*/
+*.py[cod]
+*.egg-info/
+.test-tmp/
+.pytest-tmp-*/
+.coverage
+htmlcov/
+qdrant_data/
+postgres_data/
+.idea/
+.vscode/
+benchmark/local-qdrant-*/

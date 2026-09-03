@@ -1,0 +1,34 @@
+[project]
+name = "secure-enterprise-rag"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "alembic>=1.13,<2",
+    "fastapi>=0.115,<1",
+    "httpx>=0.27,<1",
+    "langchain-community>=0.3.31,<0.4",
+    "langchain-huggingface>=0.3.1,<0.4",
+    "langchain-groq>=0.3.8,<0.4",
+    "langchain-text-splitters>=0.3.11,<0.4",
+    "jinja2>=3.1,<4",
+    "psycopg[binary]>=3.2,<4",
+    "pydantic-settings>=2.5,<3",
+    "pwdlib[argon2]>=0.2,<1",
+    "pyjwt>=2.9,<3",
+    "python-multipart>=0.0.12,<1",
+    "qdrant-client>=1.12,<2",
+    "ragas>=0.3,<0.4",
+    "sentence-transformers>=3,<6",
+    "sqlalchemy>=2.0,<3",
+    "uvicorn[standard]>=0.30,<1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["integration: uses the bundled dataset and in-memory Qdrant"]
+
+[tool.setuptools.packages.find]
+include = ["app*"]
