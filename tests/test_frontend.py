@@ -3,6 +3,12 @@ from fastapi.testclient import TestClient
 from tests.test_chat import login
 
 
+def test_home_page_redirects_to_login(client: TestClient) -> None:
+    response = client.get("/", follow_redirects=False)
+    assert response.status_code == 303
+    assert response.headers["location"] == "/login"
+
+
 def test_login_page_is_public(client: TestClient) -> None:
     response = client.get("/login")
     assert response.status_code == 200

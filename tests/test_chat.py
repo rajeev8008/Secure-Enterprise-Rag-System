@@ -1,4 +1,5 @@
 from typing import Any
+import json
 
 from fastapi.testclient import TestClient
 from qdrant_client import QdrantClient
@@ -46,6 +47,23 @@ def prompt_text(llm: Any) -> str:
 
 def test_chat_requires_authentication(client: TestClient) -> None:
     assert client.post("/api/chat", json={"question": "What is the policy?"}).status_code == 401
+    assert client.post("/api/chat/stream", json={"question": "What is the policy?"}).status_code == 401
+
+
+def test_chat_streams_answer_and_citations(
+    client: TestClient, qdrant: QdrantClient, llm
+) -> None:
+    add_chunk(qdrant, 1, "general", "PUBLIC POLICY")
+    login(client, "employee")
+
+    with client.stream("POST", "/api/chat/stream", json={"question": "What is the policy?"}) as response:
+        events = [json.loads(line) for line in response.iter_lines()]
+
+    assert response.status_code == 200
+    assert "".join(event.get("content", "") for event in events).strip() == "A grounded answer."
+    assert events[-1]["type"] == "done"
+    assert events[-1]["citations"][0]["category"] == "general"
+    assert events[-1]["refused"] is False
 
 
 def test_employee_prompt_contains_only_general_context(
