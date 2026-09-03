@@ -134,9 +134,10 @@ Compose runs database migrations at application startup and persists PostgreSQL 
 - Ingestion validates categories and uses checksums plus deterministic point IDs to prevent duplicates.
 - Ingestion and monitoring endpoints require admin access; logs and metrics exclude raw prompts, secrets, and document content.
 
-## Limitations
+## Author
 
-- Prompt-injection detection and PII redaction use deterministic, auditable rules with a defined coverage boundary.
-- The included deployment profile uses embedded Qdrant and a single application process; distributed scaling requires an external Qdrant service and replicated application instances.
-- Retrieval currently combines dense similarity with lexical support without a dedicated reranking model.
-- Answer generation depends on the configured Groq model and service availability.
+Developed by **K Rajeev**.
+
+## License
+
+[MIT](LICENSE)
