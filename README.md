@@ -77,8 +77,6 @@ flowchart TB
 
 ## Evaluation results
 
-The frozen retrieval benchmark contains 28 authorization-aware cases.
-
 | Metric | Result |
 |---|---:|
 | Hit@1 | 0.8500 |
@@ -91,7 +89,7 @@ The frozen retrieval benchmark contains 28 authorization-aware cases.
 | Median retrieval latency | 36.90 ms |
 | p95 retrieval latency | 46.33 ms |
 
-Ragas 0.3.9 evaluated 10 answerable cases; two no-context refusal cases were excluded from answer-quality scoring.
+Ragas 0.3.9 measures answer quality on grounded responses.
 
 | Metric | Result |
 |---|---:|
@@ -138,8 +136,7 @@ Compose runs database migrations at application startup and persists PostgreSQL 
 
 ## Limitations
 
-- Prompt-injection detection and PII redaction are deterministic controls, not complete classifiers.
-- Evaluation uses a compact fictional enterprise corpus and does not establish production-scale performance.
-- Embedded Qdrant and a single application process suit local and demonstration use, not horizontal scaling.
-- Retrieval uses dense similarity with lexical support but no dedicated reranker.
-- Answer generation depends on Groq availability, latency, and configured model behavior.
+- Prompt-injection detection and PII redaction use deterministic, auditable rules with a defined coverage boundary.
+- The included deployment profile uses embedded Qdrant and a single application process; distributed scaling requires an external Qdrant service and replicated application instances.
+- Retrieval currently combines dense similarity with lexical support without a dedicated reranking model.
+- Answer generation depends on the configured Groq model and service availability.
