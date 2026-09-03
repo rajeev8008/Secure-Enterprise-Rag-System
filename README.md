@@ -70,7 +70,7 @@ flowchart TB
 | Application | Python, FastAPI, Jinja2, vanilla JavaScript |
 | Authentication | JWT, HttpOnly cookies, Argon2 password hashing |
 | Retrieval | LangChain, sentence-transformers/all-MiniLM-L6-v2, Qdrant |
-| Generation | Groq |
+| Generation | Groq GPT-OSS-120b|
 | Persistence | PostgreSQL, SQLAlchemy, Alembic |
 | Evaluation | Pytest, Ragas, retrieval benchmark suite |
 | Runtime | Docker, Docker Compose |
