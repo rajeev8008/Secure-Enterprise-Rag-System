@@ -1,0 +1,1055 @@
+{
+  "date": "2026-09-03T12:02:30.299641+00:00",
+  "environment": "local",
+  "case_count": 28,
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "chunk_size": 800,
+  "chunk_overlap": 100,
+  "top_k": 4,
+  "score_threshold": 0.4,
+  "source_hashes": {
+    "sample_data/finsolve/engineering/engineering_master_doc.md": "ede36e21f5a830c9541a6d2bd17cd817720cf0da9a801f6f6894fdc0e4be3e9f",
+    "sample_data/finsolve/finance/financial_summary.md": "afef7eaa73e67bf70e8567fa72b8721553ad037706a62a06e262405b2937b6f4",
+    "sample_data/finsolve/finance/quarterly_financial_report.md": "092c09f2bc0ba9fb564a2cbbae0aaf75a6b5d080d4a4e9b19702b0b56c3d2093",
+    "sample_data/finsolve/general/employee_handbook.md": "5b8653253d53753217a5db1918dc89d4b5e7314509fa6ff0e90e12c6a8c8933c",
+    "sample_data/finsolve/hr/hr_data.csv": "d1163f9a419195d208b90803a8c0b510db2e10d362ba2f328806768ba0fcb349",
+    "sample_data/finsolve/marketing/market_report_q4_2024.md": "8a7add30b1ab362e7c29b2f6a41269c1c5e18f4766a211d97c067fabdeeb1648",
+    "sample_data/finsolve/marketing/marketing_report_2024.md": "047fe46911fcca091d41f057438783bdf881e9c99424b9ba532e692c8c0a80bd",
+    "sample_data/finsolve/marketing/marketing_report_q1_2024.md": "3c51f2f25aa759a4d2ad9426dc5a77931acbf0c7ba959f558f5215f6a5e0b0a8",
+    "sample_data/finsolve/marketing/marketing_report_q2_2024.md": "7e758a494e5eb6ea86b5f133d452ce4ee9901dd78896ce57fe70f99e1104e20b",
+    "sample_data/finsolve/marketing/marketing_report_q3_2024.md": "dd566837f65f8386c54e653bfa392115cb448c7b21f6cd464e50e5550fa92091"
+  },
+  "metrics": {
+    "hit_rate_at_1": 0.85,
+    "hit_rate_at_3": 0.95,
+    "mean_reciprocal_rank": 0.9041666666666666,
+    "category_authorization_accuracy": 1.0,
+    "unauthorized_retrieval_rate": 0.0,
+    "expected_source_accuracy": 1.0,
+    "refusal_decision_accuracy": 1.0,
+    "retrieval_latency_median_ms": 36.89809999195859,
+    "retrieval_latency_p95_ms": 46.325900009833276
+  },
+  "cases": [
+    {
+      "id": "GEN-01",
+      "retrieved_sources": [
+        "employee_handbook.md",
+        "employee_handbook.md"
+      ],
+      "retrieved_categories": [
+        "general",
+        "general"
+      ],
+      "retrieved_chunks": [
+        {
+          "point_id": "d104bf73-fe46-5950-a596-cd6e8458357d",
+          "chunk_index": 3,
+          "score": 0.94319,
+          "filename": "employee_handbook.md",
+          "category": "general",
+          "section_or_row": "Company Overview"
+        },
+        {
+          "point_id": "a5416878-5525-5341-923d-c3aae2627cbd",
+          "chunk_index": 1,
+          "score": 0.648573,
+          "filename": "employee_handbook.md",
+          "category": "general",
+          "section_or_row": "Company Vision and Mission"
+        }
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 171.32
+    },
+    {
+      "id": "GEN-02",
+      "retrieved_sources": [
+        "employee_handbook.md",
+        "employee_handbook.md",
+        "employee_handbook.md",
+        "employee_handbook.md"
+      ],
+      "retrieved_categories": [
+        "general",
+        "general",
+        "general",
+        "general"
+      ],
+      "retrieved_chunks": [
+        {
+          "point_id": "c4d7bef2-b7df-5828-a539-1a6f11b0ddb8",
+          "chunk_index": 9,
+          "score": 0.396255,
+          "filename": "employee_handbook.md",
+          "category": "general",
+          "section_or_row": "Leave Application Process"
+        },
+        {
+          "point_id": "2374eb15-e257-5c7e-b3a2-ac21a9f116b0",
+          "chunk_index": 8,
+          "score": 0.275272,
+          "filename": "employee_handbook.md",
+          "category": "general",
+          "section_or_row": "Types of Leave"
+        },
+        {
+          "point_id": "7a78651b-b462-5712-adbd-9922b6706723",
+          "chunk_index": 7,
+          "score": 0.250737,
+          "filename": "employee_handbook.md",
+          "category": "general",
+          "section_or_row": "Types of Leave"
+        },
+        {
+          "point_id": "db84e07a-c480-57b6-810f-4602592909a6",
+          "chunk_index": 51,
+          "score": 0.242125,
+          "filename": "employee_handbook.md",
+          "category": "general",
+          "section_or_row": "Full & Final Settlement"
+        }
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 33.99
+    },
+    {
+      "id": "GEN-03",
+      "retrieved_sources": [
+        "employee_handbook.md",
+        "employee_handbook.md"
+      ],
+      "retrieved_categories": [
+        "general",
+        "general"
+      ],
+      "retrieved_chunks": [
+        {
+          "point_id": "f1e12ac2-8971-5e48-9be4-79a2fb9468f3",
+          "chunk_index": 5,
+          "score": 0.682496,
+          "filename": "employee_handbook.md",
+          "category": "general",
+          "section_or_row": "Statutory Benefits"
+        },
+        {
+          "point_id": "53a6cb22-a97d-5f2e-81da-cf4c1dbbdc71",
+          "chunk_index": 25,
+          "score": 0.653979,
+          "filename": "employee_handbook.md",
+          "category": "general",
+          "section_or_row": "Salary Structure"
+        }
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 45.1
+    },
+    {
+      "id": "GEN-04",
+      "retrieved_sources": [
+        "employee_handbook.md"
+      ],
+      "retrieved_categories": [
+        "general"
+      ],
+      "retrieved_chunks": [
+        {
+          "point_id": "db84e07a-c480-57b6-810f-4602592909a6",
+          "chunk_index": 51,
+          "score": 0.836957,
+          "filename": "employee_handbook.md",
+          "category": "general",
+          "section_or_row": "Full & Final Settlement"
+        }
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 38.67
+    },
+    {
+      "id": "HR-01",
+      "retrieved_sources": [
+        "hr_data.csv",
+        "hr_data.csv",
+        "hr_data.csv",
+        "hr_data.csv"
+      ],
+      "retrieved_categories": [
+        "hr",
+        "hr",
+        "hr",
+        "hr"
+      ],
+      "retrieved_chunks": [
+        {
+          "point_id": "814cfcbc-e345-5f77-92fd-b491a9deb76a",
+          "chunk_index": 18,
+          "score": 0.695872,
+          "filename": "hr_data.csv",
+          "category": "hr",
+          "section_or_row": 20
+        },
+        {
+          "point_id": "361509d6-1bc2-5e8f-a404-c4a7dbadc60e",
+          "chunk_index": 24,
+          "score": 0.692544,
+          "filename": "hr_data.csv",
+          "category": "hr",
+          "section_or_row": 26
+        },
+        {
+          "point_id": "a954ba3e-5455-5308-8189-70e89b02526d",
+          "chunk_index": 67,
+          "score": 0.682828,
+          "filename": "hr_data.csv",
+          "category": "hr",
+          "section_or_row": 69
+        },
+        {
+          "point_id": "69950cad-9be6-5e93-99c5-eba5fc663b6f",
+          "chunk_index": 37,
+          "score": 0.5625,
+          "filename": "hr_data.csv",
+          "category": "hr",
+          "section_or_row": 39
+        }
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 37.64
+    },
+    {
+      "id": "HR-02",
+      "retrieved_sources": [
+        "hr_data.csv",
+        "hr_data.csv",
+        "hr_data.csv",
+        "hr_data.csv"
+      ],
+      "retrieved_categories": [
+        "hr",
+        "hr",
+        "hr",
+        "hr"
+      ],
+      "retrieved_chunks": [
+        {
+          "point_id": "de4e6aa4-d3c8-5d24-98b8-c6ee0f78cd7c",
+          "chunk_index": 80,
+          "score": 0.838537,
+          "filename": "hr_data.csv",
+          "category": "hr",
+          "section_or_row": 82
+        },
+        {
+          "point_id": "c2829c82-22ad-57c6-85b7-7604ffe436bc",
+          "chunk_index": 51,
+          "score": 0.837446,
+          "filename": "hr_data.csv",
+          "category": "hr",
+          "section_or_row": 53
+        },
+        {
+          "point_id": "8b50dcca-9abe-5b60-b447-429d80bfe11d",
+          "chunk_index": 19,
+          "score": 0.837159,
+          "filename": "hr_data.csv",
+          "category": "hr",
+          "section_or_row": 21
+        },
+        {
+          "point_id": "184bb889-7b60-5048-a42d-6433ff028309",
+          "chunk_index": 85,
+          "score": 0.835298,
+          "filename": "hr_data.csv",
+          "category": "hr",
+          "section_or_row": 87
+        }
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 44.72
+    },
+    {
+      "id": "HR-03",
+      "retrieved_sources": [
+        "hr_data.csv",
+        "hr_data.csv",
+        "hr_data.csv",
+        "hr_data.csv"
+      ],
+      "retrieved_categories": [
+        "hr",
+        "hr",
+        "hr",
+        "hr"
+      ],
+      "retrieved_chunks": [
+        {
+          "point_id": "cbf56f50-66cb-55ed-b305-c862363a942c",
+          "chunk_index": 6,
+          "score": 0.631302,
+          "filename": "hr_data.csv",
+          "category": "hr",
+          "section_or_row": 8
+        },
+        {
+          "point_id": "0c5490e7-c5f4-5662-bbb1-691da07f4fdf",
+          "chunk_index": 21,
+          "score": 0.630889,
+          "filename": "hr_data.csv",
+          "category": "hr",
+          "section_or_row": 23
+        },
+        {
+          "point_id": "8833ffd4-5d68-5b73-9ab0-f0a49b6aef90",
+          "chunk_index": 40,
+          "score": 0.627712,
+          "filename": "hr_data.csv",
+          "category": "hr",
+          "section_or_row": 42
+        },
+        {
+          "point_id": "16d15502-2880-5599-9e03-f979b745a5e3",
+          "chunk_index": 86,
+          "score": 0.5,
+          "filename": "hr_data.csv",
+          "category": "hr",
+          "section_or_row": 88
+        }
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 38.12
+    },
+    {
+      "id": "HR-04",
+      "retrieved_sources": [
+        "hr_data.csv",
+        "hr_data.csv",
+        "hr_data.csv",
+        "hr_data.csv"
+      ],
+      "retrieved_categories": [
+        "hr",
+        "hr",
+        "hr",
+        "hr"
+      ],
+      "retrieved_chunks": [
+        {
+          "point_id": "d8a624aa-37a6-5b2b-b5a9-17402d85c18d",
+          "chunk_index": 5,
+          "score": 0.834704,
+          "filename": "hr_data.csv",
+          "category": "hr",
+          "section_or_row": 7
+        },
+        {
+          "point_id": "21c0d720-722f-59a5-9788-74047d1a69af",
+          "chunk_index": 82,
+          "score": 0.75,
+          "filename": "hr_data.csv",
+          "category": "hr",
+          "section_or_row": 84
+        },
+        {
+          "point_id": "24ebe730-c7a8-5645-a5b0-673b079ca990",
+          "chunk_index": 74,
+          "score": 0.75,
+          "filename": "hr_data.csv",
+          "category": "hr",
+          "section_or_row": 76
+        },
+        {
+          "point_id": "67a8b46d-a28a-59fd-8ce9-42028dd04440",
+          "chunk_index": 22,
+          "score": 0.75,
+          "filename": "hr_data.csv",
+          "category": "hr",
+          "section_or_row": 24
+        }
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 44.53
+    },
+    {
+      "id": "FIN-01",
+      "retrieved_sources": [
+        "quarterly_financial_report.md",
+        "quarterly_financial_report.md",
+        "quarterly_financial_report.md",
+        "financial_summary.md"
+      ],
+      "retrieved_categories": [
+        "finance",
+        "finance",
+        "finance",
+        "finance"
+      ],
+      "retrieved_chunks": [
+        {
+          "point_id": "99ba7092-af2c-531a-b69d-8cd9b953ac4e",
+          "chunk_index": 19,
+          "score": 0.692722,
+          "filename": "quarterly_financial_report.md",
+          "category": "finance",
+          "section_or_row": "2024 Annual Summary"
+        },
+        {
+          "point_id": "03c858d4-4c5c-5488-aa47-86dda7365c7c",
+          "chunk_index": 15,
+          "score": 0.523686,
+          "filename": "quarterly_financial_report.md",
+          "category": "finance",
+          "section_or_row": "Quarterly Financial Overview"
+        },
+        {
+          "point_id": "29c3a26c-a095-59b9-b3ba-9255b52a3356",
+          "chunk_index": 20,
+          "score": 0.504101,
+          "filename": "quarterly_financial_report.md",
+          "category": "finance",
+          "section_or_row": "2024 Annual Summary"
+        },
+        {
+          "point_id": "37da8a8a-404f-5ef6-ac14-79d3083060c1",
+          "chunk_index": 1,
+          "score": 0.493907,
+          "filename": "financial_summary.md",
+          "category": "finance",
+          "section_or_row": "Financial Report for FinSolve Technologies Inc. - 2024"
+        }
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 34.59
+    },
+    {
+      "id": "FIN-02",
+      "retrieved_sources": [
+        "quarterly_financial_report.md",
+        "financial_summary.md",
+        "quarterly_financial_report.md",
+        "quarterly_financial_report.md"
+      ],
+      "retrieved_categories": [
+        "finance",
+        "finance",
+        "finance",
+        "finance"
+      ],
+      "retrieved_chunks": [
+        {
+          "point_id": "29c3a26c-a095-59b9-b3ba-9255b52a3356",
+          "chunk_index": 20,
+          "score": 0.620743,
+          "filename": "quarterly_financial_report.md",
+          "category": "finance",
+          "section_or_row": "2024 Annual Summary"
+        },
+        {
+          "point_id": "053bb533-f32c-56c9-9a80-b4e6fb65d53d",
+          "chunk_index": 4,
+          "score": 0.509927,
+          "filename": "financial_summary.md",
+          "category": "finance",
+          "section_or_row": "Financial Report for FinSolve Technologies Inc. - 2024"
+        },
+        {
+          "point_id": "22d7b256-cf91-50da-9393-07a7b1bb2c8e",
+          "chunk_index": 9,
+          "score": 0.463501,
+          "filename": "quarterly_financial_report.md",
+          "category": "finance",
+          "section_or_row": "Cash Flow Analysis"
+        },
+        {
+          "point_id": "482147a5-110e-5efa-91df-7f675cc71972",
+          "chunk_index": 13,
+          "score": 0.44648,
+          "filename": "quarterly_financial_report.md",
+          "category": "finance",
+          "section_or_row": "Cash Flow Analysis"
+        }
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 37.57
+    },
+    {
+      "id": "FIN-03",
+      "retrieved_sources": [
+        "quarterly_financial_report.md",
+        "financial_summary.md",
+        "quarterly_financial_report.md",
+        "market_report_q4_2024.md"
+      ],
+      "retrieved_categories": [
+        "finance",
+        "finance",
+        "finance",
+        "marketing"
+      ],
+      "retrieved_chunks": [
+        {
+          "point_id": "99ba7092-af2c-531a-b69d-8cd9b953ac4e",
+          "chunk_index": 19,
+          "score": 0.498163,
+          "filename": "quarterly_financial_report.md",
+          "category": "finance",
+          "section_or_row": "2024 Annual Summary"
+        },
+        {
+          "point_id": "37da8a8a-404f-5ef6-ac14-79d3083060c1",
+          "chunk_index": 1,
+          "score": 0.487916,
+          "filename": "financial_summary.md",
+          "category": "finance",
+          "section_or_row": "Financial Report for FinSolve Technologies Inc. - 2024"
+        },
+        {
+          "point_id": "22d7b256-cf91-50da-9393-07a7b1bb2c8e",
+          "chunk_index": 9,
+          "score": 0.388104,
+          "filename": "quarterly_financial_report.md",
+          "category": "finance",
+          "section_or_row": "Cash Flow Analysis"
+        },
+        {
+          "point_id": "d748ce08-646f-5e27-9565-f1b602c5756f",
+          "chunk_index": 12,
+          "score": 0.375075,
+          "filename": "market_report_q4_2024.md",
+          "category": "marketing",
+          "section_or_row": "Performance Analysis"
+        }
+      ],
+      "expected_rank": 2,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 45.97
+    },
+    {
+      "id": "FIN-04",
+      "retrieved_sources": [
+        "financial_summary.md",
+        "quarterly_financial_report.md",
+        "quarterly_financial_report.md",
+        "quarterly_financial_report.md"
+      ],
+      "retrieved_categories": [
+        "finance",
+        "finance",
+        "finance",
+        "finance"
+      ],
+      "retrieved_chunks": [
+        {
+          "point_id": "397a6610-a13e-5183-b4df-f543c8022705",
+          "chunk_index": 2,
+          "score": 0.865312,
+          "filename": "financial_summary.md",
+          "category": "finance",
+          "section_or_row": "Financial Report for FinSolve Technologies Inc. - 2024"
+        },
+        {
+          "point_id": "f9dfa04f-b0fd-5f00-8472-4452e4a3be55",
+          "chunk_index": 12,
+          "score": 0.726841,
+          "filename": "quarterly_financial_report.md",
+          "category": "finance",
+          "section_or_row": "Quarterly Expense Breakdown"
+        },
+        {
+          "point_id": "237183f8-2677-535d-9e78-e1aadf62f398",
+          "chunk_index": 3,
+          "score": 0.716143,
+          "filename": "quarterly_financial_report.md",
+          "category": "finance",
+          "section_or_row": "Quarterly Expense Breakdown"
+        },
+        {
+          "point_id": "7dd7d3cf-6015-5344-bd40-bbccf8e57f53",
+          "chunk_index": 8,
+          "score": 0.715596,
+          "filename": "quarterly_financial_report.md",
+          "category": "finance",
+          "section_or_row": "Quarterly Expense Breakdown"
+        }
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 34.78
+    },
+    {
+      "id": "ENG-01",
+      "retrieved_sources": [
+        "engineering_master_doc.md",
+        "engineering_master_doc.md"
+      ],
+      "retrieved_categories": [
+        "engineering",
+        "engineering"
+      ],
+      "retrieved_chunks": [
+        {
+          "point_id": "f4f58af1-6bba-5750-a7fd-ed3bacfc716d",
+          "chunk_index": 16,
+          "score": 0.907194,
+          "filename": "engineering_master_doc.md",
+          "category": "engineering",
+          "section_or_row": "2.5.3 Disaster Recovery"
+        },
+        {
+          "point_id": "79c9f0bf-1523-5074-a3c1-28b80195002d",
+          "chunk_index": 41,
+          "score": 0.360873,
+          "filename": "engineering_master_doc.md",
+          "category": "engineering",
+          "section_or_row": "5.3.2 Incident Response"
+        }
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 35.85
+    },
+    {
+      "id": "ENG-02",
+      "retrieved_sources": [
+        "engineering_master_doc.md",
+        "engineering_master_doc.md"
+      ],
+      "retrieved_categories": [
+        "engineering",
+        "engineering"
+      ],
+      "retrieved_chunks": [
+        {
+          "point_id": "f4f58af1-6bba-5750-a7fd-ed3bacfc716d",
+          "chunk_index": 16,
+          "score": 0.904027,
+          "filename": "engineering_master_doc.md",
+          "category": "engineering",
+          "section_or_row": "2.5.3 Disaster Recovery"
+        },
+        {
+          "point_id": "79c9f0bf-1523-5074-a3c1-28b80195002d",
+          "chunk_index": 41,
+          "score": 0.358006,
+          "filename": "engineering_master_doc.md",
+          "category": "engineering",
+          "section_or_row": "5.3.2 Incident Response"
+        }
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 36.75
+    },
+    {
+      "id": "ENG-03",
+      "retrieved_sources": [
+        "engineering_master_doc.md",
+        "engineering_master_doc.md",
+        "marketing_report_q3_2024.md",
+        "engineering_master_doc.md"
+      ],
+      "retrieved_categories": [
+        "engineering",
+        "engineering",
+        "marketing",
+        "engineering"
+      ],
+      "retrieved_chunks": [
+        {
+          "point_id": "39e47e8c-106a-5866-abb9-b651fc49ab34",
+          "chunk_index": 23,
+          "score": 0.60162,
+          "filename": "engineering_master_doc.md",
+          "category": "engineering",
+          "section_or_row": "4.1.1 Scrum Ceremonies"
+        },
+        {
+          "point_id": "2ffc2731-5072-5ab8-9add-546ce4bd6c36",
+          "chunk_index": 61,
+          "score": 0.39761,
+          "filename": "engineering_master_doc.md",
+          "category": "engineering",
+          "section_or_row": "7.4.1 Release Planning"
+        },
+        {
+          "point_id": "0026bdb1-fe8a-571a-9965-100a79a47da0",
+          "chunk_index": 0,
+          "score": 0.3,
+          "filename": "marketing_report_q3_2024.md",
+          "category": "marketing",
+          "section_or_row": "Executive Summary"
+        },
+        {
+          "point_id": "8e88f9f1-f052-5435-a739-c459edb894f7",
+          "chunk_index": 24,
+          "score": 0.274778,
+          "filename": "engineering_master_doc.md",
+          "category": "engineering",
+          "section_or_row": "4.1.2 Roles and Responsibilities"
+        }
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 44.36
+    },
+    {
+      "id": "ENG-04",
+      "retrieved_sources": [
+        "engineering_master_doc.md",
+        "engineering_master_doc.md",
+        "engineering_master_doc.md"
+      ],
+      "retrieved_categories": [
+        "engineering",
+        "engineering",
+        "engineering"
+      ],
+      "retrieved_chunks": [
+        {
+          "point_id": "39e47e8c-106a-5866-abb9-b651fc49ab34",
+          "chunk_index": 23,
+          "score": 0.546816,
+          "filename": "engineering_master_doc.md",
+          "category": "engineering",
+          "section_or_row": "4.1.1 Scrum Ceremonies"
+        },
+        {
+          "point_id": "2ffc2731-5072-5ab8-9add-546ce4bd6c36",
+          "chunk_index": 61,
+          "score": 0.50361,
+          "filename": "engineering_master_doc.md",
+          "category": "engineering",
+          "section_or_row": "7.4.1 Release Planning"
+        },
+        {
+          "point_id": "cf492be1-9223-5150-8cb3-8763cab42841",
+          "chunk_index": 22,
+          "score": 0.115101,
+          "filename": "engineering_master_doc.md",
+          "category": "engineering",
+          "section_or_row": "4.1 Agile Methodology"
+        }
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 33.42
+    },
+    {
+      "id": "MKT-01",
+      "retrieved_sources": [
+        "market_report_q4_2024.md",
+        "marketing_report_q2_2024.md",
+        "marketing_report_q1_2024.md",
+        "market_report_q4_2024.md"
+      ],
+      "retrieved_categories": [
+        "marketing",
+        "marketing",
+        "marketing",
+        "marketing"
+      ],
+      "retrieved_chunks": [
+        {
+          "point_id": "45cc5f83-7631-5b59-999b-7f355e6edb56",
+          "chunk_index": 2,
+          "score": 0.921122,
+          "filename": "market_report_q4_2024.md",
+          "category": "marketing",
+          "section_or_row": "Q4 - Marketing Overview"
+        },
+        {
+          "point_id": "2f016d03-d8dd-571f-9227-8313e3ae64e0",
+          "chunk_index": 3,
+          "score": 0.919613,
+          "filename": "marketing_report_q2_2024.md",
+          "category": "marketing",
+          "section_or_row": "Q2 - Projections & Targets"
+        },
+        {
+          "point_id": "cb0e1795-2d83-591c-a59d-0fdb6825cc66",
+          "chunk_index": 2,
+          "score": 0.918304,
+          "filename": "marketing_report_q1_2024.md",
+          "category": "marketing",
+          "section_or_row": "Q1 - Projections & Targets"
+        },
+        {
+          "point_id": "63460bdb-05a9-51f9-aef7-627f86f9bae1",
+          "chunk_index": 3,
+          "score": 0.91576,
+          "filename": "market_report_q4_2024.md",
+          "category": "marketing",
+          "section_or_row": "Q4 - Projections & Targets"
+        }
+      ],
+      "expected_rank": 3,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 35.07
+    },
+    {
+      "id": "MKT-02",
+      "retrieved_sources": [
+        "marketing_report_q1_2024.md",
+        "market_report_q4_2024.md",
+        "marketing_report_2024.md",
+        "marketing_report_q2_2024.md"
+      ],
+      "retrieved_categories": [
+        "marketing",
+        "marketing",
+        "marketing",
+        "marketing"
+      ],
+      "retrieved_chunks": [
+        {
+          "point_id": "1d99a3ce-0a98-5fe2-9bca-530ec2f11418",
+          "chunk_index": 8,
+          "score": 0.71298,
+          "filename": "marketing_report_q1_2024.md",
+          "category": "marketing",
+          "section_or_row": "Digital Marketing"
+        },
+        {
+          "point_id": "ce280dc2-87bc-5910-9ef5-00232e51ba4b",
+          "chunk_index": 9,
+          "score": 0.618409,
+          "filename": "market_report_q4_2024.md",
+          "category": "marketing",
+          "section_or_row": "Digital Marketing"
+        },
+        {
+          "point_id": "a224e3d8-562e-513f-a098-3affe91f1ccf",
+          "chunk_index": 11,
+          "score": 0.490562,
+          "filename": "marketing_report_2024.md",
+          "category": "marketing",
+          "section_or_row": "Marketing Report for FinSolve Technologies Inc. - 2024"
+        },
+        {
+          "point_id": "c7a9ec15-3338-510f-9de7-e565c45f108f",
+          "chunk_index": 9,
+          "score": 0.414026,
+          "filename": "marketing_report_q2_2024.md",
+          "category": "marketing",
+          "section_or_row": "Digital Marketing"
+        }
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 37.04
+    },
+    {
+      "id": "MKT-03",
+      "retrieved_sources": [
+        "market_report_q4_2024.md",
+        "market_report_q4_2024.md",
+        "market_report_q4_2024.md",
+        "marketing_report_q3_2024.md"
+      ],
+      "retrieved_categories": [
+        "marketing",
+        "marketing",
+        "marketing",
+        "marketing"
+      ],
+      "retrieved_chunks": [
+        {
+          "point_id": "6cebc285-ee31-55e6-9c8a-f7914a845789",
+          "chunk_index": 10,
+          "score": 0.55977,
+          "filename": "market_report_q4_2024.md",
+          "category": "marketing",
+          "section_or_row": "B2B Initiatives"
+        },
+        {
+          "point_id": "c556e781-5fd0-5c9a-8dfa-3e6d7f474c02",
+          "chunk_index": 7,
+          "score": 0.546097,
+          "filename": "market_report_q4_2024.md",
+          "category": "marketing",
+          "section_or_row": "Q4 - Strategic Objectives"
+        },
+        {
+          "point_id": "63460bdb-05a9-51f9-aef7-627f86f9bae1",
+          "chunk_index": 3,
+          "score": 0.544712,
+          "filename": "market_report_q4_2024.md",
+          "category": "marketing",
+          "section_or_row": "Q4 - Projections & Targets"
+        },
+        {
+          "point_id": "cea2b324-e903-5e7c-ba84-a7679673a75a",
+          "chunk_index": 5,
+          "score": 0.443574,
+          "filename": "marketing_report_q3_2024.md",
+          "category": "marketing",
+          "section_or_row": "Q3 - Strategic Objectives"
+        }
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 46.33
+    },
+    {
+      "id": "MKT-04",
+      "retrieved_sources": [
+        "marketing_report_q2_2024.md",
+        "marketing_report_q3_2024.md",
+        "marketing_report_q1_2024.md",
+        "market_report_q4_2024.md"
+      ],
+      "retrieved_categories": [
+        "marketing",
+        "marketing",
+        "marketing",
+        "marketing"
+      ],
+      "retrieved_chunks": [
+        {
+          "point_id": "012977d1-86b2-5059-ab0a-6a78fdd0ca0a",
+          "chunk_index": 12,
+          "score": 0.930708,
+          "filename": "marketing_report_q2_2024.md",
+          "category": "marketing",
+          "section_or_row": "Performance Analysis"
+        },
+        {
+          "point_id": "ddbf6189-0536-503a-85cf-7d86f5df9e13",
+          "chunk_index": 10,
+          "score": 0.924071,
+          "filename": "marketing_report_q3_2024.md",
+          "category": "marketing",
+          "section_or_row": "Performance Analysis"
+        },
+        {
+          "point_id": "e51b532e-ee34-58a6-add6-8f5a09adcd30",
+          "chunk_index": 11,
+          "score": 0.923136,
+          "filename": "marketing_report_q1_2024.md",
+          "category": "marketing",
+          "section_or_row": "Performance Analysis"
+        },
+        {
+          "point_id": "45cc5f83-7631-5b59-999b-7f355e6edb56",
+          "chunk_index": 2,
+          "score": 0.69344,
+          "filename": "market_report_q4_2024.md",
+          "category": "marketing",
+          "section_or_row": "Q4 - Marketing Overview"
+        }
+      ],
+      "expected_rank": 4,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 36.44
+    },
+    {
+      "id": "XROLE-01",
+      "retrieved_sources": [],
+      "retrieved_categories": [],
+      "retrieved_chunks": [],
+      "expected_rank": null,
+      "refused": true,
+      "unauthorized": 0,
+      "latency_ms": 30.44
+    },
+    {
+      "id": "XROLE-02",
+      "retrieved_sources": [],
+      "retrieved_categories": [],
+      "retrieved_chunks": [],
+      "expected_rank": null,
+      "refused": true,
+      "unauthorized": 0,
+      "latency_ms": 35.22
+    },
+    {
+      "id": "XROLE-03",
+      "retrieved_sources": [],
+      "retrieved_categories": [],
+      "retrieved_chunks": [],
+      "expected_rank": null,
+      "refused": true,
+      "unauthorized": 0,
+      "latency_ms": 0.02
+    },
+    {
+      "id": "XROLE-04",
+      "retrieved_sources": [],
+      "retrieved_categories": [],
+      "retrieved_chunks": [],
+      "expected_rank": null,
+      "refused": true,
+      "unauthorized": 0,
+      "latency_ms": 34.9
+    },
+    {
+      "id": "XROLE-05",
+      "retrieved_sources": [],
+      "retrieved_categories": [],
+      "retrieved_chunks": [],
+      "expected_rank": null,
+      "refused": true,
+      "unauthorized": 0,
+      "latency_ms": 34.1
+    },
+    {
+      "id": "NONE-01",
+      "retrieved_sources": [],
+      "retrieved_categories": [],
+      "retrieved_chunks": [],
+      "expected_rank": null,
+      "refused": true,
+      "unauthorized": 0,
+      "latency_ms": 34.94
+    },
+    {
+      "id": "NONE-02",
+      "retrieved_sources": [],
+      "retrieved_categories": [],
+      "retrieved_chunks": [],
+      "expected_rank": null,
+      "refused": true,
+      "unauthorized": 0,
+      "latency_ms": 43.8
+    },
+    {
+      "id": "NONE-03",
+      "retrieved_sources": [],
+      "retrieved_categories": [],
+      "retrieved_chunks": [],
+      "expected_rank": null,
+      "refused": true,
+      "unauthorized": 0,
+      "latency_ms": 44.68
+    }
+  ]
+}

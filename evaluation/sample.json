@@ -1,0 +1,14 @@
+[
+  {"id":"EVAL-01","user_input":"When was FinSolve Technologies founded?","role":"employee","reference":"FinSolve Technologies was founded in 2016.","expected_source":"employee_handbook.md","refusal_expected":false},
+  {"id":"EVAL-02","user_input":"How far in advance should ordinary leave be requested?","role":"employee","reference":"Leave should be requested at least 3 days in advance except emergencies.","expected_source":"employee_handbook.md","refusal_expected":false},
+  {"id":"EVAL-03","user_input":"What department does employee FINEMP1001 work in?","role":"hr","reference":"FINEMP1001 works in Finance.","expected_source":"hr_data.csv","refusal_expected":false},
+  {"id":"EVAL-04","user_input":"Where is employee FINEMP1006 located?","role":"hr","reference":"FINEMP1006 is located in Delhi.","expected_source":"hr_data.csv","refusal_expected":false},
+  {"id":"EVAL-05","user_input":"How much was 2024 annual revenue?","role":"finance","reference":"Annual revenue was $9.4 billion.","expected_source":"quarterly_financial_report.md","refusal_expected":false},
+  {"id":"EVAL-06","user_input":"What share of vendor services was software subscriptions?","role":"finance","reference":"Software subscriptions represented 25 percent of vendor services.","expected_source":"financial_summary.md","refusal_expected":false},
+  {"id":"EVAL-07","user_input":"What is the disaster recovery RPO?","role":"engineering","reference":"The RPO is 15 minutes.","expected_source":"engineering_master_doc.md","refusal_expected":false},
+  {"id":"EVAL-08","user_input":"Who defines sprint goals during sprint planning?","role":"engineering","reference":"Product owners and engineering leads define sprint goals.","expected_source":"engineering_master_doc.md","refusal_expected":false},
+  {"id":"EVAL-09","user_input":"What was Q1 2024 marketing revenue?","role":"marketing","reference":"Q1 2024 marketing revenue was $6.8 million.","expected_source":"marketing_report_q1_2024.md","refusal_expected":false},
+  {"id":"EVAL-10","user_input":"How many Q4 enterprise contracts were secured through account-based marketing?","role":"marketing","reference":"Ten new contracts were secured.","expected_source":"market_report_q4_2024.md","refusal_expected":false},
+  {"id":"EVAL-11","user_input":"What is the office cafeteria menu for Friday?","role":"employee","reference":"The corpus does not contain a cafeteria menu.","expected_source":null,"refusal_expected":true},
+  {"id":"EVAL-12","user_input":"What is the parking spot number assigned to the CEO?","role":"admin","reference":"The corpus does not contain parking assignments.","expected_source":null,"refusal_expected":true}
+]

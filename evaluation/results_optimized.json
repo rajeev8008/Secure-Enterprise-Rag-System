@@ -1,0 +1,419 @@
+{
+  "date": "2026-09-03T12:05:36.996603+00:00",
+  "ragas_version": "0.3.9",
+  "groq_model": "openai/gpt-oss-120b",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "case_count": 12,
+  "metric_configuration": [
+    "faithfulness",
+    "answer_relevancy",
+    "llm_context_precision_with_reference"
+  ],
+  "aggregates": {
+    "faithfulness": 0.75,
+    "answer_relevancy": 0.7489927418137861,
+    "llm_context_precision_with_reference": 0.7833333332591667
+  },
+  "error": null,
+  "input_tokens": 6022,
+  "output_tokens": 1001,
+  "duration_seconds": 63.89,
+  "cases": [
+    {
+      "id": "EVAL-01",
+      "response": "FinSolve Technologies was founded in **2016**\u3010Source 1\u3011.",
+      "citations": [
+        {
+          "filename": "employee_handbook.md",
+          "category": "general",
+          "section_or_row": "Company Overview",
+          "score": 0.9431897251685988
+        },
+        {
+          "filename": "employee_handbook.md",
+          "category": "general",
+          "section_or_row": "Company Vision and Mission",
+          "score": 0.6485728710189937
+        }
+      ],
+      "retrieved_contexts": [
+        "### Company Overview\n\nFounded in 2016, FinSolve Technologies is a leading player in fintech with a presence across India and global markets. We are committed to ethical business, social responsibility, and fostering a culture of learning and growth.\n\n---",
+        "### Company Vision and Mission\n\nAt FinSolve Technologies, our vision is to empower businesses and individuals through innovative technology solutions. Our mission is to deliver high-quality, sustainable products and services that create value for our stakeholders."
+      ],
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0000000000000002,
+        "llm_context_precision_with_reference": 0.9999999999
+      }
+    },
+    {
+      "id": "EVAL-02",
+      "response": "Ordinary leave should be requested at least\u202f3\u202fdays in advance (unless it\u2019s an emergency).",
+      "citations": [
+        {
+          "filename": "employee_handbook.md",
+          "category": "general",
+          "section_or_row": "Leave Application Process",
+          "score": 0.3962554773429393
+        },
+        {
+          "filename": "employee_handbook.md",
+          "category": "general",
+          "section_or_row": "Types of Leave",
+          "score": 0.275271825981706
+        },
+        {
+          "filename": "employee_handbook.md",
+          "category": "general",
+          "section_or_row": "Types of Leave",
+          "score": 0.25073711496218887
+        },
+        {
+          "filename": "employee_handbook.md",
+          "category": "general",
+          "section_or_row": "Full & Final Settlement",
+          "score": 0.24212515356343833
+        }
+      ],
+      "retrieved_contexts": [
+        "### Leave Application Process\n\n- Apply via HRMS/leave portal at least 3 days in advance (except emergencies).\n- Sick leave for more than 2 days requires a medical certificate.\n- Emergency leave to be communicated to manager/HR as soon as possible.\n- Approval from reporting manager and HR required for all leave requests.\n- Leave balance can be viewed on the HRMS portal.",
+        "### Types of Leave\n\n| **Public Holidays** | 10-14 days/year (as per company calendar and state notifications) |\n| **Leave Without Pay** | Allowed with approval after exhausting paid leave |",
+        "### Types of Leave\n\n| Leave Type | Entitlement/Details |\n|------------|---------------------|\n| **Privilege/Annual** | 15-21 days/year (as per state Shops & Establishments Act); accrued monthly |\n| **Sick Leave** | 12 days/year (non-cumulative; medical certificate for >2 days) |\n| **Casual Leave** | 7 days/year (state-specific) |\n| **Maternity Leave** | 26 weeks (first two children); 12 weeks for subsequent children |\n| **Paternity Leave** | 7-15 days (company policy; not statutory) |\n| **Bereavement Leave** | 3-7 days for immediate family (company policy) |\n| **Compensatory Off** | For work on holidays/weekends (manager approval required) |\n| **Public Holidays** | 10-14 days/year (as per company calendar and state notifications) |",
+        "### Full & Final Settlement\n\n- Processed within 30-60 days of exit, including leave encashment and statutory dues.\n\n---"
+      ],
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9999999999999999,
+        "llm_context_precision_with_reference": 0.9999999999
+      }
+    },
+    {
+      "id": "EVAL-03",
+      "response": "I cannot answer from the available documents.",
+      "citations": [
+        {
+          "filename": "hr_data.csv",
+          "category": "hr",
+          "section_or_row": 20,
+          "score": 0.6958719922149297
+        },
+        {
+          "filename": "hr_data.csv",
+          "category": "hr",
+          "section_or_row": 26,
+          "score": 0.6925443922452112
+        },
+        {
+          "filename": "hr_data.csv",
+          "category": "hr",
+          "section_or_row": 69,
+          "score": 0.6828277863577292
+        },
+        {
+          "filename": "hr_data.csv",
+          "category": "hr",
+          "section_or_row": 39,
+          "score": 0.5625
+        }
+      ],
+      "retrieved_contexts": [
+        "employee_id: FINEMP1018\nfull_name: Vivaan Reddy\nrole: Compliance Officer\ndepartment: Compliance\nemail: [REDACTED EMAIL]\nlocation: Chennai\ndate_of_birth: [REDACTED PHONE]\ndate_of_joining: [REDACTED PHONE]\nmanager_id: FINEMP1001\nsalary: [REDACTED PHONE]\nleave_balance: 29\nleaves_taken: 17\nattendance_pct: 89.53\nperformance_rating: 5\nlast_review_date: [REDACTED PHONE]",
+        "employee_id: FINEMP1024\nfull_name: Reyansh Mehta\nrole: Security Engineer\ndepartment: Technology\nemail: [REDACTED EMAIL]\nlocation: Delhi\ndate_of_birth: [REDACTED PHONE]\ndate_of_joining: [REDACTED PHONE]\nmanager_id: FINEMP1001\nsalary: [REDACTED PHONE]\nleave_balance: 29\nleaves_taken: 8\nattendance_pct: 91.43\nperformance_rating: 2\nlast_review_date: [REDACTED PHONE]",
+        "employee_id: FINEMP1067\nfull_name: Shaurya Chopra\nrole: Compliance Officer\ndepartment: Compliance\nemail: [REDACTED EMAIL]\nlocation: Lucknow\ndate_of_birth: [REDACTED PHONE]\ndate_of_joining: [REDACTED PHONE]\nmanager_id: FINEMP1001\nsalary: [REDACTED PHONE]\nleave_balance: 0\nleaves_taken: 0\nattendance_pct: 80.02\nperformance_rating: 3\nlast_review_date: [REDACTED PHONE]",
+        "employee_id: FINEMP1037\nfull_name: Vihaan Garg\nrole: Sales Manager\ndepartment: Sales\nemail: [REDACTED EMAIL]\nlocation: Jaipur\ndate_of_birth: [REDACTED PHONE]\ndate_of_joining: [REDACTED PHONE]\nmanager_id: FINEMP1001\nsalary: [REDACTED PHONE]\nleave_balance: 19\nleaves_taken: 19\nattendance_pct: 99.74\nperformance_rating: 5\nlast_review_date: [REDACTED PHONE]"
+      ],
+      "scores": {
+        "faithfulness": 0.0,
+        "answer_relevancy": 0.0,
+        "llm_context_precision_with_reference": 0.0
+      }
+    },
+    {
+      "id": "EVAL-04",
+      "response": "Employee FINEMP1006 is located in Delhi.",
+      "citations": [
+        {
+          "filename": "hr_data.csv",
+          "category": "hr",
+          "section_or_row": 8,
+          "score": 0.631301541247869
+        },
+        {
+          "filename": "hr_data.csv",
+          "category": "hr",
+          "section_or_row": 23,
+          "score": 0.6308890226577901
+        },
+        {
+          "filename": "hr_data.csv",
+          "category": "hr",
+          "section_or_row": 42,
+          "score": 0.6277123253785333
+        },
+        {
+          "filename": "hr_data.csv",
+          "category": "hr",
+          "section_or_row": 88,
+          "score": 0.5
+        }
+      ],
+      "retrieved_contexts": [
+        "employee_id: FINEMP1006\nfull_name: Sara Sharma\nrole: QA Engineer\ndepartment: Quality Assurance\nemail: [REDACTED EMAIL]\nlocation: Delhi\ndate_of_birth: [REDACTED PHONE]\ndate_of_joining: [REDACTED PHONE]\nmanager_id: FINEMP1004\nsalary: [REDACTED PHONE]\nleave_balance: 11\nleaves_taken: 10\nattendance_pct: 96.49\nperformance_rating: 2\nlast_review_date: [REDACTED PHONE]",
+        "employee_id: FINEMP1021\nfull_name: Vihaan Verma\nrole: Treasury Analyst\ndepartment: Finance\nemail: [REDACTED EMAIL]\nlocation: Delhi\ndate_of_birth: [REDACTED PHONE]\ndate_of_joining: [REDACTED PHONE]\nmanager_id: FINEMP1006\nsalary: [REDACTED PHONE]\nleave_balance: 23\nleaves_taken: 4\nattendance_pct: 83.76\nperformance_rating: 1\nlast_review_date: [REDACTED PHONE]",
+        "employee_id: FINEMP1040\nfull_name: Vihaan Reddy\nrole: QA Engineer\ndepartment: Quality Assurance\nemail: [REDACTED EMAIL]\nlocation: Hyderabad\ndate_of_birth: [REDACTED PHONE]\ndate_of_joining: [REDACTED PHONE]\nmanager_id: FINEMP1006\nsalary: [REDACTED PHONE]\nleave_balance: 8\nleaves_taken: 7\nattendance_pct: 94.28\nperformance_rating: 3\nlast_review_date: [REDACTED PHONE]",
+        "employee_id: FINEMP1086\nfull_name: Diya Iyer\nrole: Data Analyst\ndepartment: Data\nemail: [REDACTED EMAIL]\nlocation: Kolkata\ndate_of_birth: [REDACTED PHONE]\ndate_of_joining: [REDACTED PHONE]\nmanager_id: FINEMP1006\nsalary: [REDACTED PHONE]\nleave_balance: 2\nleaves_taken: 2\nattendance_pct: 88.26\nperformance_rating: 5\nlast_review_date: [REDACTED PHONE]"
+      ],
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "llm_context_precision_with_reference": 0.9999999999
+      }
+    },
+    {
+      "id": "EVAL-05",
+      "response": "FinSolve Technologies reported **2024 annual revenue of $9.4\u202fbillion**\u3010Source\u202f1\u3011.",
+      "citations": [
+        {
+          "filename": "quarterly_financial_report.md",
+          "category": "finance",
+          "section_or_row": "2024 Annual Summary",
+          "score": 0.6927215109939578
+        },
+        {
+          "filename": "quarterly_financial_report.md",
+          "category": "finance",
+          "section_or_row": "Quarterly Financial Overview",
+          "score": 0.52368625302701
+        },
+        {
+          "filename": "quarterly_financial_report.md",
+          "category": "finance",
+          "section_or_row": "2024 Annual Summary",
+          "score": 0.5041008911653558
+        },
+        {
+          "filename": "financial_summary.md",
+          "category": "finance",
+          "section_or_row": "Financial Report for FinSolve Technologies Inc. - 2024",
+          "score": 0.4939068980754036
+        }
+      ],
+      "retrieved_contexts": [
+        "## 2024 Annual Summary\n\nFinSolve Technologies Inc. achieved remarkable financial results in 2024, with total revenue of $9.4 billion, a 28% YoY increase. Gross margin improved from 58% in Q1 to 64% in Q4, reflecting enhanced pricing strategies and operational efficiencies. Net income grew to $1.15 billion, up 14% YoY, driven by consistent revenue growth and cost discipline. Marketing spend totaled $2.3 billion, supporting global expansion and customer acquisition, while vendor costs rose modestly to $510 million due to strategic investments in regional campaigns and loyalty programs.",
+        "### Quarterly Financial Overview\n\nQ4 2024 capped the year with exceptional performance, driven by end-of-year promotions and B2B marketing. Key financial highlights include:\n\n- **Revenue**: $2.6 billion, up 35% YoY, fueled by holiday campaigns and enterprise client acquisitions.\n- **Gross Margin**: 64%, reflecting optimized pricing and operational efficiencies.\n- **Operating Income**: $650 million, supported by strong revenue and cost discipline.\n- **Net Income**: $325 million, up 18% YoY, driven by top-line growth and margin expansion.\n- **Marketing Spend**: $650 million, allocated to end-of-year promotions and B2B marketing campaigns.\n- **Vendor Costs**: $135 million, increased due to high sales volume during holiday campaigns.",
+        "## 2024 Annual Summary\n\nCash flow from operations reached $1.5 billion, up 14% YoY, enabling $260 million in investments for R&D, market expansion, and product development. Financing activities provided $110 million to support working capital and long-term growth. Despite risks such as vendor cost inflation and competitive pressures, proactive mitigation strategies ensured financial stability and positioned FinSolve Technologies for continued success in 2025.",
+        "# Financial Report for FinSolve Technologies Inc. - 2024\n\nYear-Over-Year (YoY) Analysis:\n-------------------------------------------\nFinSolve Technologies's revenue grew by 25% in 2024, driven largely by the global expansion of its services, especially in Asia and Europe. This was accompanied by a 10% increase in vendor-related expenses, impacting overall profit margins. While gross profit increased by 25%, reflecting higher operational efficiency, **net income** saw a more modest increase of 12%. This suggests that while revenue growth is strong, controlling vendor costs and maintaining healthy cash flows remain key to long-term profitability.\n\nExpense Breakdown by Category:\n-------------------------------------------\nThe primary drivers of expense in 2024 were:"
+      ],
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7106528513427448,
+        "llm_context_precision_with_reference": 0.9999999999
+      }
+    },
+    {
+      "id": "EVAL-06",
+      "response": "The vendor services budget allocated **25\u202f%** to software subscriptions.\u3010Source\u202f1\u3011",
+      "citations": [
+        {
+          "filename": "financial_summary.md",
+          "category": "finance",
+          "section_or_row": "Financial Report for FinSolve Technologies Inc. - 2024",
+          "score": 0.865312262235983
+        },
+        {
+          "filename": "quarterly_financial_report.md",
+          "category": "finance",
+          "section_or_row": "Quarterly Expense Breakdown",
+          "score": 0.7268408688296304
+        },
+        {
+          "filename": "quarterly_financial_report.md",
+          "category": "finance",
+          "section_or_row": "Quarterly Expense Breakdown",
+          "score": 0.7161433377072712
+        },
+        {
+          "filename": "quarterly_financial_report.md",
+          "category": "finance",
+          "section_or_row": "Quarterly Expense Breakdown",
+          "score": 0.7155959922318114
+        }
+      ],
+      "retrieved_contexts": [
+        "# Financial Report for FinSolve Technologies Inc. - 2024\n\n1. **Vendor Services** - A total of $30M, representing a 18% increase from the previous year. The largest contributors were:\n   - **Marketing-related expenses** (Dinner, corporate events) \u2013 40% of vendor services.\n   - **Training and education expenses** \u2013 30% of vendor services.\n   - **Software subscriptions** (cloud services, licensing) \u2013 25% of vendor services.\n   - **Other miscellaneous expenses** \u2013 5% of vendor services.\n\n   *Analysis*: The **Dinner** and **Training** categories accounted for an increasing share of the marketing budget. While essential for brand positioning, these expenses need tighter management, potentially through vendor renegotiations or reduced event frequency.",
+        "### Quarterly Expense Breakdown\n\nExpenses supported retention and expansion strategies:\n\n- **Vendor Services**: $130 million, with 35% ($45.5 million) allocated to loyalty programs and customer retention strategies.\n- **Employee Benefits & HR**: $50 million, reflecting increased recruitment and training costs to support growth.\n- **Software Subscriptions**: $50 million, maintaining investment in cloud-based infrastructure.\n- **Other Operational Expenses**: $35 million, covering events, merchant partnerships, and regional activities.",
+        "### Quarterly Expense Breakdown\n\nExpenses were strategically allocated to support growth initiatives:\n\n- **Vendor Services**: $120 million, with 40% ($48 million) allocated to marketing-related activities, including digital advertisements and corporate events.\n- **Employee Benefits & HR**: $45 million, up 15% YoY due to increased staffing and employee development programs.\n- **Software Subscriptions**: $45 million, up 18% YoY, reflecting expanded reliance on cloud-based platforms for operational scalability.\n- **Other Operational Expenses**: $30 million, covering travel, office supplies, and administrative costs.",
+        "### Quarterly Expense Breakdown\n\nExpenses were aligned with strategic growth objectives:\n\n- **Vendor Services**: $125 million, with 50% ($62.5 million) dedicated to influencer marketing and social media campaigns.\n- **Employee Benefits & HR**: $47 million, reflecting investments in employee development and retention programs.\n- **Software Subscriptions**: $47 million, maintaining high operational tech costs to support scalability.\n- **Other Operational Expenses**: $33 million, covering promotional events and regional marketing activities."
+      ],
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.790321779518878,
+        "llm_context_precision_with_reference": 0.8333333332916666
+      }
+    },
+    {
+      "id": "EVAL-07",
+      "response": "The disaster recovery RPO is **15\u202fminutes**.",
+      "citations": [
+        {
+          "filename": "engineering_master_doc.md",
+          "category": "engineering",
+          "section_or_row": "2.5.3 Disaster Recovery",
+          "score": 0.9040274498191279
+        },
+        {
+          "filename": "engineering_master_doc.md",
+          "category": "engineering",
+          "section_or_row": "5.3.2 Incident Response",
+          "score": 0.3580061267343636
+        }
+      ],
+      "retrieved_contexts": [
+        "#### 2.5.3 Disaster Recovery\n\n* Regular backups to Amazon S3 with versioning enabled.\n* Cross-region replication for critical data.\n* Recovery Time Objective (RTO) of 4 hours.\n* Recovery Point Objective (RPO) of 15 minutes.\n* Quarterly disaster recovery drills and documentation.",
+        "#### 5.3.2 Incident Response\n\n* **Security Operations Center (SOC)**:\n  * 24/7 monitoring via Splunk\n  * Automated alerts based on MITRE ATT&CK framework\n  * Threat intelligence integration\n* **Incident Classification**:\n  * P0: Critical (data breach, service outage)\n  * P1: High (potential breach, significant impact)\n  * P2: Medium (limited impact)\n  * P3: Low (minimal impact)\n* **Response Procedure**:\n  * Identification and containment\n  * Evidence collection\n  * Remediation and recovery\n  * Post-incident analysis and lessons learned"
+      ],
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0000000000000002,
+        "llm_context_precision_with_reference": 0.9999999999
+      }
+    },
+    {
+      "id": "EVAL-08",
+      "response": "Product owners and engineering leads define sprint goals during sprint planning.",
+      "citations": [
+        {
+          "filename": "engineering_master_doc.md",
+          "category": "engineering",
+          "section_or_row": "4.1.1 Scrum Ceremonies",
+          "score": 0.6016199782007325
+        },
+        {
+          "filename": "engineering_master_doc.md",
+          "category": "engineering",
+          "section_or_row": "7.4.1 Release Planning",
+          "score": 0.39760954599718373
+        },
+        {
+          "filename": "engineering_master_doc.md",
+          "category": "engineering",
+          "section_or_row": "4.1.2 Roles and Responsibilities",
+          "score": 0.2747783160921704
+        },
+        {
+          "filename": "engineering_master_doc.md",
+          "category": "engineering",
+          "section_or_row": "4.1 Agile Methodology",
+          "score": 0.11106310899497673
+        }
+      ],
+      "retrieved_contexts": [
+        "#### 4.1.1 Scrum Ceremonies\n\n* **Sprint Planning**: Product owners and engineering leads define sprint goals and prioritize tasks (4 hours).\n* **Daily Standups**: 15-minute meetings to track progress and address blockers.\n* **Sprint Review**: Demo of completed features to stakeholders (2 hours).\n* **Sprint Retrospective**: Team discusses improvements for the next sprint (1.5 hours).",
+        "#### 7.4.1 Release Planning\n\n* Bi-weekly release schedule\n* Release planning meeting at sprint start\n* Release readiness review before deployment",
+        "#### 4.1.2 Roles and Responsibilities\n\n* **Product Owner**: Maintains product backlog, sets priorities, accepts stories.\n* **Scrum Master**: Facilitates ceremonies, removes impediments, coaches team.\n* **Development Team**: Self-organizes to deliver sprint commitments.\n* **Technical Lead**: Ensures technical excellence and architectural consistency.",
+        "### 4.1 Agile Methodology\n\nFinSolve follows a Scrum-based Agile process with 2-week sprints:"
+      ],
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9999999999999998,
+        "llm_context_precision_with_reference": 0.9999999999
+      }
+    },
+    {
+      "id": "EVAL-09",
+      "response": "I cannot answer from the available documents.",
+      "citations": [
+        {
+          "filename": "market_report_q4_2024.md",
+          "category": "marketing",
+          "section_or_row": "Q4 - Marketing Overview",
+          "score": 0.9211215496237684
+        },
+        {
+          "filename": "marketing_report_q2_2024.md",
+          "category": "marketing",
+          "section_or_row": "Q2 - Projections & Targets",
+          "score": 0.9196133400591803
+        },
+        {
+          "filename": "marketing_report_q1_2024.md",
+          "category": "marketing",
+          "section_or_row": "Q1 - Projections & Targets",
+          "score": 0.9183035305756775
+        },
+        {
+          "filename": "market_report_q4_2024.md",
+          "category": "marketing",
+          "section_or_row": "Q4 - Projections & Targets",
+          "score": 0.9157603852807732
+        }
+      ],
+      "retrieved_contexts": [
+        "## Q4 - Marketing Overview\n\nThese efforts were supported by a strategic allocation of resources, with a marketing spend of $2.5 million, aimed at maximizing return on investment (ROI) and achieving our revenue targets.",
+        "## Q2 - Projections & Targets\n\nOur Q2 2024 targets were designed to drive growth in new and existing markets while maintaining cost efficiency. The key projections were:\n\n- **Customer Acquisition Target**: 200,000 new customers\n  - Split evenly between Southeast Asia (50%) and existing markets (50%), with a focus on digital channels and influencer partnerships.\n- **Revenue Target**: $6 million\n  - Driven by increased sales in core markets and initial contributions from Southeast Asian markets.\n- **Marketing Spend**: $2.5 million\n  - Allocated across digital advertising (45%), influencer partnerships (20%), email marketing (15%), content marketing (10%), and event sponsorships (10%).",
+        "## Q1 - Projections & Targets\n\nOur Q1 2024 targets were designed to kickstart the year with momentum, balancing aggressive acquisition goals with efficient resource allocation. The key projections were:\n\n- **Customer Acquisition Target**: 150,000 new customers\n  - Focused on both existing markets (60%) and new European markets (40%), leveraging digital and traditional channels.\n- **Revenue Target**: $7 million\n  - Driven by increased transaction volume from new customers and InstantPay adoption.\n- **Marketing Spend**: $2 million\n  - Allocated across digital advertising (50%), product launch campaigns (20%), social media marketing (15%), content marketing (10%), and event sponsorships (5%).",
+        "## Q4 - Projections & Targets\n\nOur projections for Q4 2024 were ambitious yet grounded in historical performance and market analysis. The key targets were:\n\n- **Customer Acquisition Target**: 220,000 new customers\n  - Focused on expanding our retail and enterprise customer base through targeted campaigns and promotional offers.\n- **Revenue Target**: $11 million\n  - Driven by increased sales volume during the holiday season and new enterprise contracts.\n- **Marketing Spend**: $2.5 million\n  - Allocated across digital advertising (40%), traditional media (20%), content marketing (15%), events and sponsorships (15%), and customer retention programs (10%).\n\nThese targets were designed to align with our overarching goal of achieving a 4.4x ROI while maintaining a competitive edge in the market."
+      ],
+      "scores": {
+        "faithfulness": 0.5,
+        "answer_relevancy": 0.0,
+        "llm_context_precision_with_reference": 0.0
+      }
+    },
+    {
+      "id": "EVAL-10",
+      "response": "10 enterprise contracts were secured through account\u2011based marketing in Q4. (Source\u202f1)",
+      "citations": [
+        {
+          "filename": "market_report_q4_2024.md",
+          "category": "marketing",
+          "section_or_row": "B2B Initiatives",
+          "score": 0.5597701787206987
+        },
+        {
+          "filename": "market_report_q4_2024.md",
+          "category": "marketing",
+          "section_or_row": "Q4 - Strategic Objectives",
+          "score": 0.5460972446723522
+        },
+        {
+          "filename": "market_report_q4_2024.md",
+          "category": "marketing",
+          "section_or_row": "Q4 - Projections & Targets",
+          "score": 0.5447119211093754
+        },
+        {
+          "filename": "marketing_report_q3_2024.md",
+          "category": "marketing",
+          "section_or_row": "Q3 - Strategic Objectives",
+          "score": 0.44357443051455775
+        }
+      ],
+      "retrieved_contexts": [
+        "### B2B Initiatives\n\n- **Account-Based Marketing**: Targeted 50 high-value enterprise accounts, securing 10 new contracts worth $1.2 million in annual recurring revenue.\n- **Industry Events**: Sponsored two major industry conferences, generating 300 qualified leads.",
+        "## Q4 - Strategic Objectives\n\n1. **Maximize End-of-Year Sales Through Promotions**\n   - Implemented aggressive promotional campaigns, including Black Friday and holiday season discounts, to drive sales volume.\n   - Leveraged email marketing and social media to promote limited-time offers, resulting in a 20% increase in website traffic compared to Q3.\n2. **Focus on B2B Marketing and Increase Enterprise Client Sign-Ups**\n   - Developed targeted account-based marketing (ABM) campaigns to engage enterprise clients in the technology, finance, and healthcare sectors.\n   - Hosted virtual roundtables and webinars to showcase our solutions, leading to a 15% increase in enterprise leads.\n3. **Improve Customer Retention with Targeted Offers**",
+        "## Q4 - Projections & Targets\n\nOur projections for Q4 2024 were ambitious yet grounded in historical performance and market analysis. The key targets were:\n\n- **Customer Acquisition Target**: 220,000 new customers\n  - Focused on expanding our retail and enterprise customer base through targeted campaigns and promotional offers.\n- **Revenue Target**: $11 million\n  - Driven by increased sales volume during the holiday season and new enterprise contracts.\n- **Marketing Spend**: $2.5 million\n  - Allocated across digital advertising (40%), traditional media (20%), content marketing (15%), events and sponsorships (15%), and customer retention programs (10%).\n\nThese targets were designed to align with our overarching goal of achieving a 4.4x ROI while maintaining a competitive edge in the market.",
+        "## Q3 - Strategic Objectives\n\n1. **Strengthen Customer Retention with Loyalty Programs**\n   - Launched a points-based loyalty program offering redeemable rewards for purchases and referrals.\n   - Implemented targeted email campaigns with personalized offers, resulting in a 10% increase in repeat purchases compared to Q2.\n2. **Launch New Merchant Partnerships in Latin America**\n   - Secured partnerships with 15 regional merchants in Brazil, Mexico, and Colombia to offer exclusive discounts to our customers.\n   - Integrated merchant offers into our platform, driving a 12% increase in transaction volume in these markets.\n3. **Grow Brand Awareness Through Localized Events**\n   - Sponsored 10 cultural and industry events across Latin America, including music festivals and trade shows."
+      ],
+      "scores": {
+        "faithfulness": 0.0,
+        "answer_relevancy": 0.9889527872762374,
+        "llm_context_precision_with_reference": 0.9999999999
+      }
+    },
+    {
+      "id": "EVAL-11",
+      "response": "I could not find sufficient information in the documents available to you.",
+      "citations": [],
+      "retrieved_contexts": [],
+      "skipped_metrics": "refusal_has_no_context"
+    },
+    {
+      "id": "EVAL-12",
+      "response": "I could not find sufficient information in the documents available to you.",
+      "citations": [],
+      "retrieved_contexts": [],
+      "skipped_metrics": "refusal_has_no_context"
+    }
+  ]
+}

@@ -1,0 +1,412 @@
+{
+  "date": "2026-09-03T11:06:58.489522+00:00",
+  "environment": "local",
+  "case_count": 28,
+  "top_k": 4,
+  "score_threshold": 0.5,
+  "metrics": {
+    "hit_rate_at_1": 0.7,
+    "hit_rate_at_3": 0.75,
+    "mean_reciprocal_rank": 0.7166666666666667,
+    "category_authorization_accuracy": 1.0,
+    "unauthorized_retrieval_rate": 0.0,
+    "expected_source_accuracy": 0.75,
+    "refusal_decision_accuracy": 0.8571428571428571,
+    "retrieval_latency_median_ms": 12.528099992778152,
+    "retrieval_latency_p95_ms": 19.632300012744963
+  },
+  "cases": [
+    {
+      "id": "GEN-01",
+      "retrieved_sources": [
+        "employee_handbook.md",
+        "employee_handbook.md"
+      ],
+      "retrieved_categories": [
+        "general",
+        "general"
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 32.32
+    },
+    {
+      "id": "GEN-02",
+      "retrieved_sources": [
+        "employee_handbook.md",
+        "employee_handbook.md",
+        "employee_handbook.md",
+        "employee_handbook.md"
+      ],
+      "retrieved_categories": [
+        "general",
+        "general",
+        "general",
+        "general"
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 15.02
+    },
+    {
+      "id": "GEN-03",
+      "retrieved_sources": [],
+      "retrieved_categories": [],
+      "expected_rank": null,
+      "refused": true,
+      "unauthorized": 0,
+      "latency_ms": 10.84
+    },
+    {
+      "id": "GEN-04",
+      "retrieved_sources": [
+        "employee_handbook.md"
+      ],
+      "retrieved_categories": [
+        "general"
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 12.49
+    },
+    {
+      "id": "HR-01",
+      "retrieved_sources": [
+        "hr_data.csv",
+        "hr_data.csv",
+        "hr_data.csv",
+        "hr_data.csv"
+      ],
+      "retrieved_categories": [
+        "hr",
+        "hr",
+        "hr",
+        "hr"
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 14.57
+    },
+    {
+      "id": "HR-02",
+      "retrieved_sources": [],
+      "retrieved_categories": [],
+      "expected_rank": null,
+      "refused": true,
+      "unauthorized": 0,
+      "latency_ms": 14.63
+    },
+    {
+      "id": "HR-03",
+      "retrieved_sources": [
+        "hr_data.csv",
+        "hr_data.csv",
+        "hr_data.csv",
+        "hr_data.csv"
+      ],
+      "retrieved_categories": [
+        "hr",
+        "hr",
+        "hr",
+        "hr"
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 10.69
+    },
+    {
+      "id": "HR-04",
+      "retrieved_sources": [],
+      "retrieved_categories": [],
+      "expected_rank": null,
+      "refused": true,
+      "unauthorized": 0,
+      "latency_ms": 14.36
+    },
+    {
+      "id": "FIN-01",
+      "retrieved_sources": [
+        "quarterly_financial_report.md",
+        "quarterly_financial_report.md",
+        "quarterly_financial_report.md",
+        "quarterly_financial_report.md"
+      ],
+      "retrieved_categories": [
+        "finance",
+        "finance",
+        "finance",
+        "finance"
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 19.1
+    },
+    {
+      "id": "FIN-02",
+      "retrieved_sources": [
+        "quarterly_financial_report.md",
+        "quarterly_financial_report.md",
+        "quarterly_financial_report.md",
+        "quarterly_financial_report.md"
+      ],
+      "retrieved_categories": [
+        "finance",
+        "finance",
+        "finance",
+        "finance"
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 12.32
+    },
+    {
+      "id": "FIN-03",
+      "retrieved_sources": [
+        "quarterly_financial_report.md",
+        "quarterly_financial_report.md",
+        "quarterly_financial_report.md",
+        "market_report_q4_2024.md"
+      ],
+      "retrieved_categories": [
+        "finance",
+        "finance",
+        "finance",
+        "marketing"
+      ],
+      "expected_rank": null,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 11.17
+    },
+    {
+      "id": "FIN-04",
+      "retrieved_sources": [
+        "quarterly_financial_report.md"
+      ],
+      "retrieved_categories": [
+        "finance"
+      ],
+      "expected_rank": null,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 10.43
+    },
+    {
+      "id": "ENG-01",
+      "retrieved_sources": [
+        "engineering_master_doc.md"
+      ],
+      "retrieved_categories": [
+        "engineering"
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 11.82
+    },
+    {
+      "id": "ENG-02",
+      "retrieved_sources": [
+        "engineering_master_doc.md"
+      ],
+      "retrieved_categories": [
+        "engineering"
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 10.85
+    },
+    {
+      "id": "ENG-03",
+      "retrieved_sources": [
+        "engineering_master_doc.md"
+      ],
+      "retrieved_categories": [
+        "engineering"
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 9.96
+    },
+    {
+      "id": "ENG-04",
+      "retrieved_sources": [
+        "engineering_master_doc.md",
+        "engineering_master_doc.md"
+      ],
+      "retrieved_categories": [
+        "engineering",
+        "engineering"
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 9.98
+    },
+    {
+      "id": "MKT-01",
+      "retrieved_sources": [
+        "market_report_q4_2024.md",
+        "marketing_report_q2_2024.md",
+        "marketing_report_q1_2024.md",
+        "market_report_q4_2024.md"
+      ],
+      "retrieved_categories": [
+        "marketing",
+        "marketing",
+        "marketing",
+        "marketing"
+      ],
+      "expected_rank": 3,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 10.71
+    },
+    {
+      "id": "MKT-02",
+      "retrieved_sources": [
+        "marketing_report_q1_2024.md",
+        "market_report_q4_2024.md",
+        "marketing_report_q2_2024.md"
+      ],
+      "retrieved_categories": [
+        "marketing",
+        "marketing",
+        "marketing"
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 19.63
+    },
+    {
+      "id": "MKT-03",
+      "retrieved_sources": [
+        "market_report_q4_2024.md",
+        "quarterly_financial_report.md",
+        "market_report_q4_2024.md",
+        "market_report_q4_2024.md"
+      ],
+      "retrieved_categories": [
+        "marketing",
+        "finance",
+        "marketing",
+        "marketing"
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 12.57
+    },
+    {
+      "id": "MKT-04",
+      "retrieved_sources": [
+        "market_report_q4_2024.md",
+        "market_report_q4_2024.md",
+        "market_report_q4_2024.md",
+        "marketing_report_q2_2024.md"
+      ],
+      "retrieved_categories": [
+        "marketing",
+        "marketing",
+        "marketing",
+        "marketing"
+      ],
+      "expected_rank": 1,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 11.71
+    },
+    {
+      "id": "XROLE-01",
+      "retrieved_sources": [],
+      "retrieved_categories": [],
+      "expected_rank": null,
+      "refused": true,
+      "unauthorized": 0,
+      "latency_ms": 12.04
+    },
+    {
+      "id": "XROLE-02",
+      "retrieved_sources": [],
+      "retrieved_categories": [],
+      "expected_rank": null,
+      "refused": true,
+      "unauthorized": 0,
+      "latency_ms": 14.72
+    },
+    {
+      "id": "XROLE-03",
+      "retrieved_sources": [
+        "quarterly_financial_report.md",
+        "quarterly_financial_report.md",
+        "quarterly_financial_report.md",
+        "quarterly_financial_report.md"
+      ],
+      "retrieved_categories": [
+        "finance",
+        "finance",
+        "finance",
+        "finance"
+      ],
+      "expected_rank": null,
+      "refused": false,
+      "unauthorized": 0,
+      "latency_ms": 18.67
+    },
+    {
+      "id": "XROLE-04",
+      "retrieved_sources": [],
+      "retrieved_categories": [],
+      "expected_rank": null,
+      "refused": true,
+      "unauthorized": 0,
+      "latency_ms": 15.78
+    },
+    {
+      "id": "XROLE-05",
+      "retrieved_sources": [],
+      "retrieved_categories": [],
+      "expected_rank": null,
+      "refused": true,
+      "unauthorized": 0,
+      "latency_ms": 12.05
+    },
+    {
+      "id": "NONE-01",
+      "retrieved_sources": [],
+      "retrieved_categories": [],
+      "expected_rank": null,
+      "refused": true,
+      "unauthorized": 0,
+      "latency_ms": 18.73
+    },
+    {
+      "id": "NONE-02",
+      "retrieved_sources": [],
+      "retrieved_categories": [],
+      "expected_rank": null,
+      "refused": true,
+      "unauthorized": 0,
+      "latency_ms": 19.59
+    },
+    {
+      "id": "NONE-03",
+      "retrieved_sources": [],
+      "retrieved_categories": [],
+      "expected_rank": null,
+      "refused": true,
+      "unauthorized": 0,
+      "latency_ms": 16.4
+    }
+  ]
+}
