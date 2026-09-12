@@ -11,7 +11,8 @@ Standard RAG pipelines can retrieve sensitive content before authorization is ap
 - Six-role, database-authoritative RBAC for employee, HR, finance, engineering, marketing, and admin users
 - Server-side Qdrant category filtering before context reaches the LLM
 - LangChain document loading and Markdown-aware chunking
-- MiniLM embeddings with dense retrieval and authorized lexical support
+- Qdrant named dense and sparse vectors using MiniLM and BM25 encoding
+- Bounded dense/sparse retrieval fused with reciprocal rank fusion (RRF)
 - Grounded Groq answers with structured citations and evidence-based refusal
 - Prompt-injection blocking and PII redaction
 - Checksum-based idempotent ingestion
@@ -59,7 +60,7 @@ flowchart TB
 1. The server authenticates the JWT cookie and reloads the user and role from PostgreSQL.
 2. Deterministic guardrails block prompt injection and redact supported PII patterns.
 3. The role-to-category policy derives the user's allowed categories; client-supplied roles are never trusted.
-4. Qdrant applies the category filter during retrieval, followed by authorized lexical support and evidence checks.
+4. Qdrant applies the same category filter to dense and BM25 sparse searches, then fuses the bounded candidates with RRF.
 5. Insufficient evidence returns a refusal; otherwise, only authorized, redacted context is sent to Groq.
 6. The response includes structured citations, while request metrics are stored without raw prompts or document text.
 
@@ -69,7 +70,7 @@ flowchart TB
 |---|---|
 | Application | Python, FastAPI, Jinja2, vanilla JavaScript |
 | Authentication | JWT, HttpOnly cookies, Argon2 password hashing |
-| Retrieval | LangChain, sentence-transformers/all-MiniLM-L6-v2, Qdrant |
+| Retrieval | LangChain, MiniLM dense vectors, Qdrant/BM25 sparse vectors, Qdrant RRF |
 | Generation | Groq GPT-OSS-120b|
 | Persistence | PostgreSQL, SQLAlchemy, Alembic |
 | Evaluation | Pytest, Ragas, retrieval benchmark suite |
@@ -97,7 +98,18 @@ Ragas 0.3.9 measures answer quality on grounded responses.
 | Answer relevancy | 0.7490 |
 | Context precision | 0.7833 |
 
-The complete test suite last verified at **71 passed**. Detailed artifacts are available in the [retrieval benchmark report](benchmark/report_optimized.md) and [Ragas report](evaluation/report_optimized.md).
+Detailed artifacts are available in the [retrieval benchmark report](benchmark/report_optimized.md) and [Ragas report](evaluation/report_optimized.md).
+
+### Resume-readiness condition
+
+Do not use final resume claims about the hybrid retrieval implementation until the GitHub repository contains verified evidence for every item below:
+
+- Qdrant named dense and sparse vectors
+- BM25 sparse encoding
+- RRF fusion
+- A 100+ query benchmark and its results
+- 200+ executable automated tests
+- Recalculated metrics after the hybrid-search migration
 
 ## Local setup
 
