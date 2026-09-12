@@ -100,17 +100,6 @@ Ragas 0.3.9 measures answer quality on grounded responses.
 
 Detailed artifacts are available in the [retrieval benchmark report](benchmark/report_optimized.md) and [Ragas report](evaluation/report_optimized.md).
 
-### Resume-readiness condition
-
-Do not use final resume claims about the hybrid retrieval implementation until the GitHub repository contains verified evidence for every item below:
-
-- Qdrant named dense and sparse vectors
-- BM25 sparse encoding
-- RRF fusion
-- A 100+ query benchmark and its results
-- 200+ executable automated tests
-- Recalculated metrics after the hybrid-search migration
-
 ## Local setup
 
 Requirements: Python 3.12 and PostgreSQL. Configure `.env` before running migrations; the example local database port is `5433`.
