@@ -41,14 +41,6 @@ class FakeLLM:
         self.calls.append(messages)
         return SimpleNamespace(content=self.content, usage_metadata=self.usage_metadata)
 
-    def stream(self, messages: object):
-        from types import SimpleNamespace
-
-        self.calls.append(messages)
-        for word in self.content.split(" "):
-            yield SimpleNamespace(content=word + " ")
-
-
 @pytest.fixture
 def work_path() -> Path:
     path = Path(".test-tmp")

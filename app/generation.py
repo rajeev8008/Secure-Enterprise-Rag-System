@@ -1,6 +1,5 @@
 from functools import lru_cache
 from dataclasses import dataclass
-from collections.abc import Iterator
 from typing import Any
 
 from app.config import get_settings
@@ -53,12 +52,3 @@ def generate_grounded_answer(question: str, chunks: list[RetrievedChunk], llm: A
         input_tokens=usage.get("input_tokens", usage.get("prompt_tokens")),
         output_tokens=usage.get("output_tokens", usage.get("completion_tokens")),
     )
-
-
-def stream_grounded_answer(
-    question: str, chunks: list[RetrievedChunk], llm: Any
-) -> Iterator[str]:
-    for chunk in llm.stream(_messages(question, chunks)):
-        content = getattr(chunk, "content", "")
-        if isinstance(content, str) and content:
-            yield content
